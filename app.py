@@ -1,5 +1,6 @@
 """Chest X-Ray Disease Classifier — Streamlit App."""
-
+import os
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
 from pathlib import Path
 
 import numpy as np
@@ -8,8 +9,7 @@ import tensorflow as tf
 from PIL import Image
 from tensorflow.keras.applications.densenet import preprocess_input
 from tensorflow.keras.preprocessing import image as keras_image
-import os
-os.environ["TF_USE_LEGACY_KERAS"] = "1"
+
 # ── Constants ────────────────────────────────────────────────────────────────
 
 CLASS_NAMES: list[str] = ["COVID", "Lung Opacity", "Normal", "Viral Pneumonia"]
