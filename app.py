@@ -8,7 +8,8 @@ import tensorflow as tf
 from PIL import Image
 from tensorflow.keras.applications.densenet import preprocess_input
 from tensorflow.keras.preprocessing import image as keras_image
-
+import os
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
 # ── Constants ────────────────────────────────────────────────────────────────
 
 CLASS_NAMES: list[str] = ["COVID", "Lung Opacity", "Normal", "Viral Pneumonia"]
